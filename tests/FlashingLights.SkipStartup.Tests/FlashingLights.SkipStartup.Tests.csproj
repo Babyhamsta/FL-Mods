@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\FlashingLights.SkipStartup\FlashingLights.SkipStartup.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="FlashingLights.ModKit.Core">
+      <HintPath>$(ModKitRoot)lib\FlashingLights.ModKit.Core.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="MelonLoader">
+      <HintPath>$(MelonLoaderNet6)MelonLoader.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Il2CppInterop.Runtime">
+      <HintPath>$(MelonLoaderNet6)Il2CppInterop.Runtime.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(Il2CppAssemblies)UnityEngine.CoreModule.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>$(Il2CppAssemblies)Il2Cppmscorlib.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Il2CppPlayMaker">
+      <HintPath>$(Il2CppAssemblies)Il2CppPlayMaker.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

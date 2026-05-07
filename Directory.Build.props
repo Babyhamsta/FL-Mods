@@ -1,0 +1,12 @@
+<Project>
+  <PropertyGroup>
+    <GameRoot Condition="'$(GameRoot)' == '' and '$(FL_GAME_ROOT)' != ''">$(FL_GAME_ROOT)</GameRoot>
+    <GameRoot Condition="'$(GameRoot)' == ''">C:\Program Files (x86)\Steam\steamapps\common\Flashing Lights\</GameRoot>
+    <ModKitRoot Condition="'$(ModKitRoot)' == '' and '$(FL_MODKIT_ROOT)' != ''">$(FL_MODKIT_ROOT)</ModKitRoot>
+    <ModKitRoot Condition="'$(ModKitRoot)' == ''">$(MSBuildThisFileDirectory)sdk\FlashingLightsModKit-v0.1.0\</ModKitRoot>
+    <MelonLoaderNet6>$(GameRoot)MelonLoader\net6\</MelonLoaderNet6>
+    <Il2CppAssemblies>$(GameRoot)MelonLoader\Il2CppAssemblies\</Il2CppAssemblies>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+</Project>

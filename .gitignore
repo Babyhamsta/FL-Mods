@@ -1,0 +1,15 @@
+bin/
+obj/
+.vs/
+.vscode/
+
+# Local SDK or game runtime drops. Build with -p:ModKitRoot instead.
+sdk/
+lib/
+Mods/
+UserData/
+
+# Local logs and packaged outputs.
+*.log
+artifacts/
+*.zip
