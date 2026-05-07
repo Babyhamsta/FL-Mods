@@ -1,10 +1,13 @@
 # Skip Startup
 
-Skip Startup is a small Flashing Lights ModKit v0.1.0 mod that fast-forwards the game's language loader, opens `MainMenu2`, then refreshes the menu once language content is ready.
+Skip Startup is a small [Flashing Lights ModKit](https://github.com/Babyhamsta/FL-ModKit/) mod that fast-forwards the game's language loader, opens `MainMenu2`, then refreshes the menu once language content is ready.
+
+Minimum ModKit version: `0.1.0`
 
 ## Design
 
 - Uses `ModKitMelonMod<SkipStartupConfig>`.
+- Declares `0.1.0` as its minimum ModKit version in the mod manifest.
 - Keeps config minimal: `Enabled` and `VerboseLogging`.
 - Uses `StartupScenePolicy` for testable scene-skip decisions.
 - Uses no Harmony patches.

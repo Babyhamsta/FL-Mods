@@ -1,23 +1,25 @@
 # Babyhamsta FL Mods
 
-Public Flashing Lights mods built against Flashing Lights ModKit v0.1.0. Each mod is a normal external SDK consumer so players and modders can inspect, build, modify, and send pull requests without depending on the SDK source tree.
+Public Flashing Lights mods built against [Flashing Lights ModKit](https://github.com/Babyhamsta/FL-ModKit/). Each mod is a normal external SDK consumer so players and modders can inspect, build, modify, and send pull requests without depending on the SDK source tree.
+
+Each mod declares its own minimum ModKit version because future mods may require newer SDK features.
 
 ## Mods
 
-| Mod | Project | Status |
-| --- | --- | --- |
-| Skip Startup | `src/FlashingLights.SkipStartup` | Initial public mod |
+| Mod | Project | Min ModKit | Status |
+| --- | --- | --- | --- |
+| Skip Startup | `src/FlashingLights.SkipStartup` | `0.1.0` | Initial public mod |
 
 ## Requirements
 
 - Flashing Lights with MelonLoader installed.
 - .NET SDK 9.x building `net6.0` projects.
-- Flashing Lights ModKit v0.1.0 extracted somewhere outside this repo.
+- Flashing Lights ModKit extracted somewhere outside this repo. Use the version required by the mod you are building.
 
 Use these placeholders in commands:
 
 - `<GameRoot>`: folder that contains the game's `MelonLoader` folder.
-- `<ModKitRoot>`: extracted `FlashingLightsModKit-v0.1.0` SDK folder.
+- `<ModKitRoot>`: extracted ModKit SDK folder, such as `FlashingLightsModKit-v0.1.0`.
 
 You can also set `FL_GAME_ROOT` and `FL_MODKIT_ROOT`, or extract the SDK to:
 
@@ -61,6 +63,8 @@ src\FlashingLights.SkipStartup\bin\Release\net6.0\FlashingLights.SkipStartup.dll
 Launch the game. Press `Insert` to open the ModKit overlay and confirm the mod appears in the Mods tab.
 
 ## Skip Startup
+
+Minimum ModKit version: `0.1.0`
 
 Skip Startup fast-forwards the `Start` scene language loader, opens `MainMenu2`, then refreshes the menu once language content is ready so players reach the main menu faster without breaking localized menu text.
 
